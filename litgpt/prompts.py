@@ -444,7 +444,7 @@ def model_name_to_prompt_style(model_name: str) -> PromptStyle:
         return Phi2()
     if re.search("Phi-3", model_name):
         return Phi3()
-    if re.search("phi-4", model_name):
+    if re.search("phi-4", model_name) or re.search("Phi-4", model_name):
         return Phi4()
     if re.search(r"tiny-llama.*chat", model_name):
         return TinyLlama()
